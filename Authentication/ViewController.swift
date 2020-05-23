@@ -65,6 +65,17 @@ class ViewController: UIViewController {
                     // the authentication was not successful
                     print("The authentication was not successful")
                 }
+                
+                
+                
+                if error != nil {
+                    
+                    // an error occurred while authenticating
+                    guard let err = error else { return }
+                    
+                    print("an error occurred while authenticating the user:", err.localizedDescription)
+                    
+                }
             }
             
         } else {
